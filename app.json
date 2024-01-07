@@ -1,0 +1,30 @@
+{
+  "expo": {
+    "name": "audioLib",
+    "slug": "audioLib",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./app/assets/splash.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./app/assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#000000"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./app/assets/splash.png",
+        "backgroundColor": "#000000"
+      }
+    },
+    "web": {
+      "favicon": "./app/assets/splash.png"
+    }
+  }
+}
