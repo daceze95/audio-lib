@@ -18,6 +18,7 @@ export default function WelcomeScreen() {
       style={styles.container}>
       <Screen style={styles.container}>
         <Image style={styles.logo} source={require('../assets/splash.png')} />
+
         <View style={styles.textContainer}>
           <Text style={styles.textStyle}>Welcome to Audio Lib</Text>
           <Text style={[styles.textStyle, styles.aboutTextStyle]}>
@@ -31,6 +32,30 @@ export default function WelcomeScreen() {
             title='Get Started'
             onPress={() => console.log('Pressed!')}
           />
+
+          <View style={styles.innerButtonContainer}>
+            <Text
+              style={[
+                styles.textStyle,
+                styles.aboutTextStyle,
+                styles.smallerText,
+              ]}>
+              Already have an account?
+            </Text>
+            <AppButton
+              title='Sign In'
+              onPress={() => console.log('signin page')}
+              bgColor={{
+                borderWidth: 2,
+                borderColor: appStyle.green,
+                backgroundColor: 'transparent',
+              }}
+              color={{ color: appStyle.green }}
+            />
+            <Text style={[styles.usernameSigninText, styles.smallerText]}>
+              Sign in with audioLib username
+            </Text>
+          </View>
         </View>
       </Screen>
     </ImageBackground>
@@ -41,7 +66,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    // justifyContent: 'center',
+    justifyContent: 'space-around',
   },
   textContainer: {
     alignItems: 'center',
@@ -63,6 +88,15 @@ const styles = StyleSheet.create({
     height: 150,
   },
   buttonContainer: {
-    flex: 1,
+    width: '100%',
+    paddingHorizontal: 20,
+    gap: 20,
   },
+  innerButtonContainer: {
+    width: '100%',
+    alignItems: 'center',
+    gap: 8,
+  },
+  usernameSigninText: { color: appStyle.green },
+  smallerText: { fontSize: 14 },
 });
