@@ -3,7 +3,6 @@ import {
   View,
   Image,
   ImageBackground,
-  Button,
   Text,
 } from 'react-native';
 
@@ -17,7 +16,7 @@ export default function WelcomeScreen() {
       source={require('../assets/welcome-screen-bg.png')}
       style={styles.container}>
       <Screen style={styles.container}>
-        <Image style={styles.logo} source={require('../assets/splash.png')} />
+        <Image style={appStyle.logo} source={require('../assets/splash.png')} />
 
         <View style={styles.textContainer}>
           <Text style={styles.textStyle}>Welcome to Audio Lib</Text>
@@ -67,6 +66,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'space-around',
+    paddingHorizontal: 10,
   },
   textContainer: {
     alignItems: 'center',
@@ -83,10 +83,10 @@ const styles = StyleSheet.create({
     fontSize: 15,
     marginTop: 5,
   },
-  logo: {
-    width: 150,
-    height: 150,
-  },
+  // logo: {
+  //   width: 150,
+  //   height: 150,
+  // },
   buttonContainer: {
     width: '100%',
     paddingHorizontal: 20,
